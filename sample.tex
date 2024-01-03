@@ -62,10 +62,10 @@
 
 
 % Change some fonts, if necessary
-\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
-\renewcommand{\personalinfofont}{\footnotesize}
-\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
-\renewcommand{\cvsubsectionfont}{\large\bfseries}
+%\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+%\renewcommand{\personalinfofont}{\footnotesize}
+%\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+%\renewcommand{\cvsubsectionfont}{\large\bfseries}
 
 
 % Change the bullets for itemize and rating marker
@@ -100,10 +100,10 @@
 \addbibresource{sample.bib}
 
 \begin{document}
-\name{Your Name Here}
-\tagline{Your Position or Tagline Here}
+%\name{Tom Dobson}
+%\tagline{Data Consultant}
 %% You can add multiple photos on the left or right
-\photoR{2.8cm}{Globe_High}
+%\photoR{2.8cm}{Globe_High}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
@@ -137,9 +137,15 @@
   % \mastodon{@username@instance}{https://instance.url/@username}
 }
 
-\makecvheader
+
+%\makecvheader
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 % \AtBeginEnvironment{itemize}{\small}
+
+\begin{fullwidth}
+  %\makecvheader
+  \namefont\color{name}\MakeUppercase{Tom Dobson}\par
+\end{fullwidth}
 
 %% Set the left/right column width ratio to 6:4.
 \columnratio{0.6}
