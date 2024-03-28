@@ -19,7 +19,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=1cm,right=1cm,top=1.25cm,bottom=1.25cm,columnsep=1.2cm,footskip=2\baselineskip}
+\geometry{left=1cm,right=1cm,top=1.25cm,bottom=1.25cm,columnsep=0.8cm,footskip=2\baselineskip}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -42,7 +42,7 @@
   % If using pdflatex:
   \usepackage[rm]{roboto}
   \usepackage[defaultsans]{lato}
-  % \usepackage{sourcesanspro}
+  %\usepackage{sourcesanspro}
   \renewcommand{\familydefault}{\sfdefault}
 \fi
 
@@ -50,7 +50,7 @@
 \definecolor{accent}{HTML}{000e17}
 \definecolor{heading}{HTML}{000e17}
 \definecolor{emphasis}{HTML}{696969}
-\definecolor{body}{HTML}{01415f}
+\definecolor{body}{HTML}{000000}
 %\colorlet{name}{black}
 %\colorlet{tagline}{PastelRed}
 %\colorlet{heading}{DarkPastelRed}
@@ -74,7 +74,7 @@
 \renewcommand{\cvRatingMarker}{\faCircle}
 % ...and the markers for the date/location for \cvevent
 % \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
-% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+\renewcommand{\cvLocationMarker}{\faMapMarker*}
 
 
 % If your CV/résumé is in a language other than English,
@@ -94,23 +94,22 @@
 %% Use (and optionally edit if necessary) this .tex if you
 %% want an originally numerical reference style like IEEE
 %% for your publication list
-\input{pubs-num.cfg}
+% \input{pubs-num.cfg}
 
 %% sample.bib contains your publications
-\addbibresource{sample.bib}
-
+% \addbibresource{sample.bib}
 
 \begin{document}
-\name{Tom M. Dobson}
-\tagline{Data Consultant}
+\name{Tom Dobson}
+% \tagline{Data Consultant}
 %% You can add multiple photos on the left or right
 %\photoR{2.8cm}{Globe_High}
 %\photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
   % Not all of these are required!
-  \email{tom.dobson@theinformationlab.co.uk}
-%  \phone{+44 (0)7968 674704}
+  \email{dobs.tx@gmail.com}
+%  \phone{+44 (0)**** ******}
 %  \mailaddress{Åddrésş, Street, 00000 Cóuntry}
   \location{London, UK}
 %  \homepage{www.homepage.com}
@@ -138,7 +137,6 @@
   % \mastodon{@username@instance}{https://instance.url/@username}
 }
 
-
 \makecvname
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 % \AtBeginEnvironment{itemize}{\small}
@@ -148,57 +146,90 @@
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
+
 \begin{paracol}{2}
 \cvsection{Experience}
 
-\cvevent{Data Consultant}{The Information Lab}{April 2022 -- Ongoing}{London}
+\cvevent{Data Consultant}{The Information Lab}{Apr 2022 -- Present}{London}
 \begin{itemize}
-\item Something
-\item Something
+\item Completed an intensive, highly competitive, four-month training programme at one of the UK’s leading data analytics consultancy firms.
+\item Automated an internal client management process, involving the detection of new projects in Notion and generation of relevant documents in Google Sheets and Convo, saving approximately 0.25 FTE and eliminating human error.
+streamlining the delivery of event notifications to employees.
+\item Designed and implemented an automated system to detect and post alerts for relevant Tableau User Group events to an internal Convo network using Python, GitHub Actions, Zapier, and Snowflake.
+% \item Delivered in-person and online training in Tableau and Alteryx across a number of clients and sectors, including the University of 
+% Hertfordshire.
+\item Conducted two years of technical consulting using SQL, Tableau, Alteryx, and Python at the following organisations:
+
+% Developed skills in stakeholder management, documentation authorship and maintenance, and version-control.
+\medskip
+\cvtag{Tableau}
+\cvtag{SQL}
+\cvtag{Python}
+\cvtag{Alteryx}
+\cvtag{PowerBI}
+\cvtag{Zapier}
+
+\end{itemize}
+
+\divider
+
+\cvevent{Insight Analyst}{Inmarsat}{Jan 2024 -- Present}{London}
+\begin{itemize}
+\item Designed and deployed a revenue protection system using SQL and Tableau to enable account managers to identify customers are approaching their contract's end of commitment date, identifying \$3.7m in annualised revenue at risk in April 2024 alone.
+% \scriptsize
+% \begin{center}\textit{"I think this may be the best dashboard I have ever seen come from within our own ranks."}\\Chuck Mosely, Sales Director\end{center}
+% \normalsize
+
 \end{itemize}
 
 \divider
 
 \cvevent{Advanced Analytics \& Reporting Analyst}{IAG Cargo}{Feb 2023 -- Aug 2023}{London}
 \begin{itemize}
-\item Job description 1
-\item Job description 2
+\item Developed and productionised solutions in Oracle and Tableau to intelligently distribute tasks between warehouse employees based on resource availability and task complexity, resulting in significant time savings.
+\item Designed and implemented an automated system using SQL and Tableau to identify cargo that is declared incorrectly. Enabled recuperation of lost revenue via automated reporting of offending clients via BusinessObjects.
+% \item Collaborated with stakeholders to design and deliver maintainable, high-performance Tableau tools to fulfil key business needs.
+\item Performed a full audit of an undocumented database to determine its suitability for answering a range of business questions, presenting findings to senior stakeholders.
+\item Scoped and re-engineered an Oracle database schema to prevent errors when calculating business-critical metrics. !!What was the metric??, tested changes in parallel, and oversaw migration to the new design.
+\item Implemented a CO\textsubscript{2} monitoring pipeline to enable the calculation of customer emissions profiles.
 \end{itemize}
 
 \divider
 
-\cvevent{Tableau/Alteryx Consultant}{BBC}{July 2022 -- Jan 2023}{London}
+\cvevent{Tableau/Alteryx Consultant}{British Broadcasting Corporation (BBC)}{July 2022 -- Jan 2023}{London}
 \begin{itemize}
-\item Job description 1
-\item Job description 2
+\item Designed ETL pipelines in Alteryx to combine and standardise big data from a variety of different sources.
+\item Collaborated with internal and external stakeholders to construct a dashboard to support a global understanding of band perception.
+\item Automated the delivery of daily reports of the best performing news stories to senior stakeholders.
+\item Built a Tableau dashboard to highlight articles and themes that receive consistent and long-lasting traffic to guide content creation.
+
 \end{itemize}
-
-\cvsection{Projects}
-
-\cvevent{Project 1}{Funding agency/institution}{}{}
-\begin{itemize}
-\item Details
-\end{itemize}
-
-\divider
-
-\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
-A short abstract would also work.
-
-\medskip
-
-\cvsection{A Day of My Life}
-
-% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% \wheelchart{outer radius}{inner radius}{
-% comma-separated list of value/text width/color/detail}
-\wheelchart{1.5cm}{0.5cm}{%
-  6/8em/accent!30/{Sleep,\\beautiful sleep},
-  3/8em/accent!40/Hopeful novelist by night,
-  8/8em/accent!60/Daytime job,
-  2/10em/accent/Sports and relaxation,
-  5/6em/accent!20/Spending time with family
-}
+%\cvsection{Projects}
+%
+%\cvevent{Project 1}{Funding agency/institution}{}{}
+%\begin{itemize}
+%\item Details
+%\end{itemize}
+%
+%\divider
+%
+%\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+%A short abstract would also work.
+%
+%\medskip
+%
+%\cvsection{A Day of My Life}
+%
+%% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+%% \wheelchart{outer radius}{inner radius}{
+%% comma-separated list of value/text width/color/detail}
+%\wheelchart{1.5cm}{0.5cm}{%
+%  6/8em/accent!30/{Sleep,\\beautiful sleep},
+%  3/8em/accent!40/Hopeful novelist by night,
+%  8/8em/accent!60/Daytime job,
+%  2/10em/accent/Sports and relaxation,
+%  5/6em/accent!20/Spending time with family
+%}
 
 % use ONLY \newpage if you want to force a page break for
 % ONLY the current column
@@ -212,12 +243,14 @@ A short abstract would also work.
 \makecvinfo
 
 \cvsection{Education}
-\cvevent{MSc. (R) Biological Sciences}{University of Bristol}{Sep 2020 -- Aug 2021}{}
-\small \faTrophy \;Nominee · Best Postgraduate Thesis
-\\\smallskip
+\cvevent{MSc. (R) Biological Sciences}{University of Bristol}{Sep 2016 -- Aug 2021}{}
+\small \faGraduationCap \;First Class Hons. (BSc.)
+\smallskip
+\\\small \faTrophy \;Nominee · Best Postgraduate Thesis
+\\\medskip
 
-\small \faFile* Thesis: Investigating the effects of low-dose UV-B and ambient temperature on dark-induced leaf senescence in Arabidopsis
-\\\smallskip
+% \small \faFile* Thesis: Investigating the effects of low-dose UV-B and ambient temperature on dark-induced leaf senescence in Arabidopsis
+% \\\smallskip
 %
 % \faTrophy \;Best Postgraduate Thesis [Nominee]
 % \faCode \;Python, R, LaTeX
@@ -226,76 +259,77 @@ A short abstract would also work.
 \cvtag{SPSS}
 \cvtag{\LaTeX}
 
-\divider
+% \divider
 
-\cvevent{BSc.\ Biology}{University of Bristol}{Sep 2016 -- June 2019}{}
-\small \faTrophy \;First Class Hons.
+% \cvevent{BSc.\ Biology}{University of Bristol}{Sep 2016 -- June 2019}{}
+% \small \faTrophy \;First Class Hons.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skills %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cvsection{Skills}
 \cvskill{Tableau}{5}
+\cvskill{Alteryx}{5}
 \cvskill{SQL}{4}
-\cvskill{Alteryx}{4}
 \cvskill{Python}{3}
 \cvskill{Power BI}{3}
-\small{$\bullet$  = Proficient\hfill 
-$\bullet$$\bullet$$\bullet$$\bullet$$\bullet$ = Expert}\\
+% \small{$\bullet$  = Proficient\hfill 
+% $\bullet$$\bullet$$\bullet$$\bullet$$\bullet$ = Expert}\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Strengths %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cvsection{Tools \& Tech}
-\textbf{\faDatabase Databases}\\
-\smallskip
-\cvtag{Oracle 11g}
-\cvtag{Snowflake}
+\divider
+% \cvsection{Tools \& Tech}
+\\\textbf{\faDatabase \:Databases}\\
+\medskip
+\cvtag{BigQuery}
+\cvtag{Snowflake}\\
+\cvtag{Oracle 11\textit{g}}
+\cvtag{Microsoft SQL Server}
 
 \divider
 
-\textbf{Management}\\
-\smallskip
+\textbf{\faGithub \:Management}\\
+\medskip
 \cvtag{GitHub}
 \cvtag{Jira}
 \cvtag{Notion}
 
-
 \divider
 
-\textbf{SQL Development/Data Engineering}\\
-\smallskip
+\textbf{\faCogs \:Data Engineering}\\
+\medskip
 \cvtag{SQL}
 \cvtag{Git}
 \cvtag{Python}
-\cvtag{yaml}
+\cvtag{YAML}
 
 \divider
 
-\textbf{Data Science}\\
-\smallskip
+\textbf{\faFlask \:Data Science}\\
+\medskip
 \cvtag{Jupyter}
-\cvtag{numpy}
+\cvtag{NumPy}
 \cvtag{pandas}
-%\cvtag{PostgreSQL}
+\cvtag{VS Code}
 
-\cvsection{Certificates}
-\cvevent{\small Tableau Certified Data Analyst}{}{August 2023}{}
+\cvsection{Certifications}
+\cvevent{\small Tableau Certified Data Analyst}{}{Aug 2023}{}
 %\faCertificate https://www.credly.com/badges/ee7090eb-b41f-48f9-90ad-21d1d45b7966/public\_url
+\cvevent{\small Microsoft Certified: Power BI Data Analyst\\Associate}{}{Oct 2023}{}
+\cvevent{\small Alteryx Designer Advanced Certified}{}{Mar 2024}{}
 
 % \divider
 
-\cvsection{Referees}
-
-% \cvref{name}{email}{mailing address}
-\cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
-{Address Line 1\\Address line 2}
-
-\divider
-
-\cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
-{Address Line 1\\Address line 2}
-
+%\cvsection{Referees}
+%
+%% \cvref{name}{email}{mailing address}
+%\cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+%{Address Line 1\\Address line 2}
+%
+%\divider
+%
+%\cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+%{Address Line 1\\Address line 2}
 
 \end{paracol}
-
 
 \end{document}
