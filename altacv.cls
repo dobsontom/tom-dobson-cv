@@ -308,7 +308,7 @@
 % v1.7: adds accsupp ActualText for location and date markers
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
+  \smallskip\small
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
   \smallskip}
@@ -326,13 +326,15 @@
 }
 
 % v1.7: adds accsupp for the icon as well
-\newcommand{\cvachievement}[3]{%
-  \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
-  \multirow{2}{*}{\Large\color{accent}\BeginAccSupp{method=escape,ActualText={#1: }}#1\EndAccSupp{}} & \bfseries\textcolor{emphasis}{#2}\\
-  & #3
+\newcommand{\cvachievement}[4]{%
+  \begin{tabularx}{\linewidth}{@{}p{1.8em} @{\hspace{0.7em}} >{\raggedright\arraybackslash}X@{}}
+  \multirow{2}{*}{\includegraphics[height=1.3\baselineskip]{#1}} & \small\textcolor{emphasis}{#2}\\
+  & \footnotesize#3
   \end{tabularx}%
   \smallskip
 }
+
+
 
 \newcommand{\cvtag}[1]{%
   \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
