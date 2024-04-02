@@ -97,7 +97,7 @@
 \colorlet{name}{heading}
 \colorlet{tagline}{accent}
 % Renamed or added v1.7
-\newcommand{\cvItemMarker}{{\small\textbullet}}
+\newcommand{\cvItemMarker}{{\textbullet}}
 \newcommand{\cvRatingMarker}{\faCircle}
 \let\itemmarker\cvItemMarker      % for backward compatibility
 \let\ratingmarker\cvRatingMarker  % for backward compatibility
@@ -257,7 +257,7 @@
 \newcommand{\namefont}{\Huge\bfseries}
 \newcommand{\taglinefont}{\large\bfseries}
 \newcommand{\personalinfofont}{\footnotesize\bfseries}
-\newcommand{\cvsectionfont}{\LARGE\bfseries}
+\newcommand{\cvsectionfont}{\Large\bfseries}
 \newcommand{\cvsubsectionfont}{\large\bfseries}
 
 \newcommand{\makecvname}{%
@@ -272,7 +272,7 @@
 %    {\personalinfofont\@personalinfo\par}
     \end{minipage}\hfill%
 %    \altacv@right@photos\par%
-  \endgroup%\medskip
+  \endgroup\smallskip
 }
 
 \newcommand{\makecvinfo}{%
@@ -296,7 +296,7 @@
   \nointerlineskip\bigskip%  %% bugfix in v1.6.2
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
   {\color{heading}\cvsectionfont\MakeUppercase{#2}}\\[-1ex]%
-  {\color{headingrule}\rule{\linewidth}{1.5pt}\par}\medskip
+  {\color{headingrule}\rule{\linewidth}{1pt}\par}\medskip
 }
 
 \newcommand{\cvsubsection}[1]{%
@@ -335,19 +335,19 @@
 }
 
 \newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex,font=\small]{#1};
+  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
 }
 
 % v1.6: Use accsupp so that the actual numeric value is copied/pasted
 %       and also support 0.5, 1.5, 2.5, 3.5, 4.5
 \newcommand{\cvskill}[2]{%
-  \textcolor{emphasis}{\textbf{#1}}\hfill
+  \textcolor{body}{{#1}}\hfill
   \BeginAccSupp{method=plain,ActualText={#2}}
   \foreach \x in {1,...,5}{%
     \ifdimequal{\x pt - #2 pt}{0.5pt}%
-    {\clipbox*{0pt -0.25ex {.5\width} {\totalheight}}{\color{accent}\cvRatingMarker}%
+    {\clipbox*{0pt -0.25ex {.5\width} {\totalheight}}{\color{body}\cvRatingMarker}%
      \clipbox*{{.5\width} -0.25ex {\width} {\totalheight}}{\color{body!30}\cvRatingMarker}}
-    {\ifdimgreater{\x bp}{#2 bp}{\color{body!30}}{\color{accent}}\cvRatingMarker}%
+    {\ifdimgreater{\x bp}{#2 bp}{\color{body!30}}{\color{body}}\cvRatingMarker}%
   }\EndAccSupp{}\par%
 }
 
