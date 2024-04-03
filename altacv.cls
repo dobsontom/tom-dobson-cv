@@ -332,12 +332,12 @@
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}}
   \ifstrequal{#3}{}{}{%
-    {\hfill\small\makebox[0.3\linewidth][l]%
+    {\enspace\small\makebox[0.3\linewidth][l]%
       {\BeginAccSupp{method=pdfstringdef,ActualText={\datename:}}\cvDateMarker\EndAccSupp{}%
       ~#3}%
     }}%
   \ifstrequal{#4}{}{}{%
-    {\small\makebox[0.2\linewidth][c]%
+    {\hfill\small\makebox[0.185\linewidth][l]%
       {\BeginAccSupp{method=pdfstringdef,ActualText={\locationname:}}\cvLocationMarker\EndAccSupp{}%
         ~#4}%
     }}\par
