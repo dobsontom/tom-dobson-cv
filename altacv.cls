@@ -46,7 +46,6 @@
 \RequirePackage{ifxetex,ifluatex}
 \RequirePackage{scrlfile}
 \RequirePackage{xparse}
-\usepackage[absolute,overlay]{textpos}
 
 %% v1.1.5: added for convenience
 \newif\ifxetexorluatex
@@ -98,7 +97,7 @@
 \colorlet{name}{heading}
 \colorlet{tagline}{accent}
 % Renamed or added v1.7
-\newcommand{\cvItemMarker}{{\textbullet}}
+\newcommand{\cvItemMarker}{{\small\textbullet}}
 \newcommand{\cvRatingMarker}{\faCircle}
 \let\itemmarker\cvItemMarker      % for backward compatibility
 \let\ratingmarker\cvRatingMarker  % for backward compatibility
@@ -118,7 +117,6 @@
 \RequirePackage{dashrule}
 \RequirePackage{multirow,tabularx}
 \RequirePackage{changepage}
-\RequirePackage{ifthen}
 
 \setlength{\parindent}{0pt}
 \newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
