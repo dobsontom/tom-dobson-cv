@@ -46,6 +46,7 @@
 \RequirePackage{ifxetex,ifluatex}
 \RequirePackage{scrlfile}
 \RequirePackage{xparse}
+\usepackage[absolute,overlay]{textpos}
 
 %% v1.1.5: added for convenience
 \newif\ifxetexorluatex
@@ -117,6 +118,7 @@
 \RequirePackage{dashrule}
 \RequirePackage{multirow,tabularx}
 \RequirePackage{changepage}
+\RequirePackage{ifthen}
 
 \setlength{\parindent}{0pt}
 \newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
@@ -306,6 +308,7 @@
 
 % v1.1.4: fixes inconsistent font size
 % v1.7: adds accsupp ActualText for location and date markers
+
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1\par}
   \smallskip\small
@@ -325,6 +328,24 @@
   \medskip\normalsize
 }
 
+\newcommand{\customcvevent}[4]{%
+  {\large\color{emphasis}#1\par}
+   \smallskip\small
+  \ifstrequal{#2}{}{}{
+  \textbf{\color{accent}#2}}
+  \ifstrequal{#3}{}{}{%
+    {\hfill\small\makebox[0.3\linewidth][l]%
+      {\BeginAccSupp{method=pdfstringdef,ActualText={\datename:}}\cvDateMarker\EndAccSupp{}%
+      ~#3}%
+    }}%
+  \ifstrequal{#4}{}{}{%
+    {\small\makebox[0.2\linewidth][c]%
+      {\BeginAccSupp{method=pdfstringdef,ActualText={\locationname:}}\cvLocationMarker\EndAccSupp{}%
+        ~#4}%
+    }}\par
+  \medskip\normalsize
+}
+c
 % v1.7: adds accsupp for the icon as well
 \newcommand{\cvachievement}[4]{%
   \begin{tabularx}{\linewidth}{@{}p{1.8em} @{\hspace{0.7em}} >{\raggedright\arraybackslash}X@{}}
@@ -333,7 +354,6 @@
   \end{tabularx}%
   \smallskip
 }
-
 
 
 \newcommand{\cvtag}[1]{%
