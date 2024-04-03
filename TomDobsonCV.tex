@@ -1,0 +1,220 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.25cm,bottom=1.25cm,columnsep=0.85cm,footskip=2\baselineskip}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  %\usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{DimGray}{HTML}{696969}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{Black}{HTML}{000000}
+\colorlet{name}{Black}
+\colorlet{tagline}{Black}
+\colorlet{heading}{Black}
+\colorlet{headingrule}{LightGrey}
+\colorlet{subheading}{SlateGrey}
+\colorlet{accent}{SlateGrey}
+\colorlet{emphasis}{Black}
+\colorlet{body}{Black}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\scriptsize\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+\renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+\begin{document}
+\name{Tom Dobson}
+\personalinfo{%
+  \email{dobs.tx@gmail.com}
+  \hfill\location{London, UK}
+  \\\linkedin{tomdobs}
+  \hfill\phone{+44 (0)7968 123456}
+  \\\github{tomdobs}
+}
+
+\makecvname
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.65}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{Data Consultant}{The Information Lab}{Apr 2022 -- Present}{London}
+\begin{itemize}
+\item Completed an intensive, highly competitive, four-month training programme at a leading data analytics consultancy, specialising in Tableau, SQL, Alteryx, and Python.
+\item Automated an internal client management process, detecting new opportunities in Notion and generating accompanying documentation, saving 0.25 FTE and eliminating errors.
+\item Designed and implemented an automated system to detect new Tableau User Group listings and post alerts to an internal network using Python, GitHub Actions, Zapier, and Snowflake.
+\item Conducted two years of technical consulting at the following organisations:
+% \item Delivered in-person and online training in Tableau and Alteryx across a number of clients and sectors, including the University of Hertfordshire.
+% Developed skills in stakeholder management, documentation authorship and maintenance, and version-control.
+
+\medskip
+\cvtag{Tableau}
+\cvtag{Snowflake}
+\cvtag{Alteryx}
+\cvtag{Python}
+\cvtag{PowerBI}
+% \cvtag{Zapier}
+
+\end{itemize}
+
+\divider
+
+\cvevent{Insight Analyst}{Inmarsat}{Jan 2024 -- Present}{London}
+\begin{itemize}
+\item Designed and deployed a revenue protection system using SQL and Tableau to identify customers that are approaching their contract's end of commitment date, exposing \$3.7m in annualised revenue at risk in April 2024.
+% \scriptsize
+% \begin{center}\textit{"I think this may be the best dashboard I have ever seen come from within our own ranks."}\\Chuck Mosely, Sales Director\end{center}
+% \normalsize
+
+\medskip
+\cvtag{Tableau}
+\cvtag{BigQuery}
+\cvtag{GoogleSQL}
+\cvtag{Alteryx}
+\cvtag{ADF}
+
+\end{itemize}
+
+\divider
+
+\cvevent{Advanced Analytics \& Reporting Analyst}{IAG Cargo}{Feb 2023 -- Aug 2023}{London}
+\begin{itemize}
+\item Developed and productionised solutions in Oracle and Tableau to intelligently distribute tasks between warehouse employees based on resource availability and task complexity, resulting in significant time savings.
+\item Designed and implemented an automated system using SQL and Tableau to identify incorrectly declared cargo. Enabled recuperation of lost revenue via automated reporting of offending clients via BusinessObjects.
+\item Performed a full audit of an undocumented database to determine its suitability for answering a range of business questions, presenting findings to senior stakeholders.
+\item Scoped and re-engineered an Oracle database schema to prevent errors when calculating business-critical metrics (\textit{specifically?}), testing changes in parallel, and overseeing migration to the new design.
+\item Implemented a CO\textsubscript{2} monitoring pipeline to enable the calculation of customer emissions profiles ( ... ) .
+
+\medskip
+\cvtag{Tableau}
+\cvtag{Oracle}
+\cvtag{PL/SQL}
+\cvtag{BusinessObjects}
+
+\end{itemize}
+
+\divider
+
+\cvevent{Tableau \& Alteryx Consultant}{British Broadcasting Corporation (BBC)}{July 2022 -- Jan 2023}{London}
+\begin{itemize}
+\item Developed ETL pipelines in Alteryx to combine and standardise survey data from various sources.
+\item Collaborated with internal and external stakeholders to construct a dashboard supporting a global understanding of band perception. 
+\item Automated the delivery of daily reports on the best-performing news stories to senior stakeholders.
+\item Built a Tableau dashboard to highlight articles and themes with consistent and long-lasting traffic to guide content creation.
+
+\medskip
+\cvtag{Tableau}
+\cvtag{PostgreSQL}
+\cvtag{Alteryx}
+
+\end{itemize}
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Contact}
+\makecvinfo
+
+\cvsection{Education}
+\cvevent{MSc. (R) Biological Sciences}{University of Bristol}{Sep 2016 -- Aug 2021}{}
+\small
+\faGraduationCap \;First Class Hons. (BSc.)
+\smallskip
+\\ \faTrophy \;Nominee · Best Postgraduate Thesis
+\\\medskip
+\cvtag{Python}
+\cvtag{R}
+\cvtag{SPSS}
+\cvtag{\LaTeX}
+
+\cvsection{Skills}
+\cvskill{Tableau}{5}
+\cvskill{Alteryx}{5}
+\cvskill{SQL}{4}
+\cvskill{Python}{3}
+\cvskill{Power BI}{3}
+% \small{$\bullet$  = Proficient\hfill 
+% $\bullet$$\bullet$$\bullet$$\bullet$$\bullet$ = Expert}\\
+
+\divider
+\\\textbf{\faDatabase \:Databases}\\
+\medskip
+\cvtag{BigQuery}
+\cvtag{Snowflake}
+\\\smallskip
+\cvtag{Oracle 11\textit{g}}
+\cvtag{MS SQL Server}
+
+\divider
+
+\textbf{\faGithub \:Management}\\
+\medskip
+\cvtag{GitHub}
+\cvtag{Jira}
+\cvtag{Notion}
+
+\divider
+
+\textbf{\faCogs \:Data Engineering}\\
+\medskip
+\cvtag{SQL}
+\cvtag{Python}
+\cvtag{PowerShell}
+\cvtag{Git}
+
+\divider
+
+\textbf{\faFlask \:Data Science}\\
+\medskip
+\cvtag{Jupyter}
+\cvtag{NumPy}
+\cvtag{pandas}
+\cvtag{VS Code}
+
+\cvsection{Certifications}
+\cvachievement{./icons/alteryxLogo.pdf}{Alteryx Designer Advanced Certified}{March 2024}{}
+\cvachievement{./icons/pbiLogo.pdf}{Power BI Data Analyst Associate}{October 2023}{}
+\cvachievement{./icons/tableauLogo.pdf}{Tableau Certified Data Analyst}{August 2023}{}
+
+\end{paracol}
+\end{document}
