@@ -343,7 +343,7 @@
     }}\par
   \medskip\normalsize
 }
-c
+
 % v1.7: adds accsupp for the icon as well
 \newcommand{\cvachievement}[4]{%
   \begin{tabularx}{\linewidth}{@{}p{1.8em} @{\hspace{0.7em}} >{\raggedright\arraybackslash}X@{}}
