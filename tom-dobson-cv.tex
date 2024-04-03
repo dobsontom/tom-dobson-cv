@@ -22,7 +22,7 @@
   % If using pdflatex:
   \usepackage[rm]{roboto}
   \usepackage[defaultsans]{lato}
-  %\usepackage{sourcesanspro}
+  \usepackage[defaultsans]{sourcesanspro}
   \renewcommand{\familydefault}{\sfdefault}
 \fi
 
@@ -41,14 +41,14 @@
 \colorlet{body}{Black}
 
 % Change some fonts, if necessary
-% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\namefont}{\Huge\bfseries}
 % \renewcommand{\personalinfofont}{\footnotesize}
 % \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 % \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
-\renewcommand{\cvItemMarker}{{\scriptsize\textbullet}}
+\renewcommand{\cvItemMarker}{{\footnotesize\textbullet}}
 \renewcommand{\cvRatingMarker}{\faCircle}
 % ...and the markers for the date/location for \customcvevent
 % \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
