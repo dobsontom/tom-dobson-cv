@@ -2,10 +2,9 @@
 This CV is version-controlled, written in LaTeX, and based on [AltaCV](https://github.com/liantze/AltaCV) by LianTze Lim.
 
 ## How to Read
-To view this CV, you can download the compiled PDF from the following [link](tom-dobson-cv.pdf).
+To read this CV, you can download the compiled PDF from the following [link](tom-dobson-cv.pdf).
 
 ## How to Compile
-
 ### LaTeX Distribution
 Make sure you have the correct LaTeX distribution installed for your operating system:
 * **Windows**:	[MikTex](https://miktex.org/download) 
