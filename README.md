@@ -1,5 +1,5 @@
-# Tom Dobson's CV
-This CV is version-controlled, written in LaTeX, and based on [AltaCV](https://github.com/liantze/AltaCV) by LianTze Lim.
+# About This CV
+This CV is version-controlled, written in LaTeX, and based on [AltaCV](https://github.com/liantze/AltaCV) class by LianTze Lim.
 
 ## How to Read
 To read this CV, you can download the compiled PDF from the following [link](tom-dobson-cv.pdf).
@@ -7,8 +7,8 @@ To read this CV, you can download the compiled PDF from the following [link](tom
 ## How to Compile
 ### LaTeX Distribution
 Make sure you have the correct LaTeX distribution installed for your operating system:
-* **Windows**:	[MikTex](https://miktex.org/download) 
-* **Linux**:	[TexLive](https://www.tug.org/texlive/quickinstall.html)
+* **Windows**:	[MiKTex](https://miktex.org/download) 
+* **Linux**:	[Tex Live](https://www.tug.org/texlive/quickinstall.html)
 
 ### Compilation
 1. Clone or [download](https://github.com/tomdobs/tom-dobson-cv/archive/refs/heads/main.zip) the GitHub repository.
