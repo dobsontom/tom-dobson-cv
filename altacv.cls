@@ -272,7 +272,7 @@
 %    {\personalinfofont\@personalinfo\par}
     \end{minipage}\hfill%
 %    \altacv@right@photos\par%
-  \endgroup\smallskip
+  \endgroup%\smallskip
 }
 
 \newcommand{\makecvinfo}{%
