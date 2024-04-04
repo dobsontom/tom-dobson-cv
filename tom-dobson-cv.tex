@@ -1,7 +1,36 @@
+\begin{filecontents*}{\jobname.xmpdata}
+    \Title{Tom Dobson Curriculum Vitae}
+    \Author{T. M. Dobson}
+    \Language{en-GB}
+    \Keywords{CV\sep Resume\sep Data\sep Developer\sep Consultant\sep Tableau\sep SQL\sep Alteryx\sep Python\sep Power BI}
+    \Subject{Professional CV highlighting experience in data analytics and consulting.}
+\end{filecontents*}
+
 \PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Adding metadata:
+% \usepackage{datetime}
+% \usepackage{ifpdf}
+% \ifpdf
+% \pdfinfo{
+%    /Author (Tom Dobson)
+%    /Title (Tom Dobson Curriculum Vitae)
+%    /Keywords (Tom Dobson, Curriculum Vitae, CV, Resume, Data, Developer, Tableau, Alteryx, SQL, Python, Power BI)
+%    /CreationDate (D:\pdfdate)
+% }
+
+% \usepackage[colorlinks=true, allcolors=black]{hyperref}
+		    
+% \hypersetup{pdfauthor={Thomas Magnus Dobson},
+%             pdftitle={Investigating the Effects of Low-Dose UV-B and Ambient Temperature on Dark-Induced Leaf Senescence in Arabidopsis},
+%             pdfsubject={MSc (R) Thesis},
+%             pdfkeywords={Leaf, Senescence, UV-B, Ambient temperature, Arabidopsis},
+%             pdfproducer={LaTeX with hyperref},
+%             pdfcreator={pdflatex}}
+
 
 % Change the page layout if you need to
 \geometry{left=1.25cm,right=1.25cm,top=1.25cm,bottom=1.25cm,columnsep=0.85cm,footskip=2\baselineskip}
@@ -58,9 +87,9 @@
 \name{Tom Dobson}
 \personalinfo{%
   \email{dobs.tx@gmail.com}\par
-  \linkedin{tomdobs}
+  \linkedin{dobsontom}
   \hfill\location{London, UK}\par
-  \github{tomdobs}
+  \github{dobsontom}
   \hfill\phone{+44 (0)7968 123456}
 }
 
