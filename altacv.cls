@@ -39,7 +39,13 @@
 %% v1.3.2 Hopefully this helps make the PDF
 %% file more 'friendly' with copy-paste etc
 \RequirePackage{etoolbox}
+
 \RequirePackage[a-1b]{pdfx}
+\hypersetup{
+    pdftitle={Your Title Here},
+    pdfauthor={Your Name Here},
+    pdfkeywords={keyword1, keyword2, keyword3}
+}
 \RequirePackage{accsupp}
 \RequirePackage[margin=2cm]{geometry}
 \RequirePackage[fixed]{fontawesome5}
