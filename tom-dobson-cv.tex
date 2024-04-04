@@ -1,4 +1,12 @@
 \PassOptionsToPackage{dvipsnames}{xcolor}
+
+\begin{filecontents*}{\jobname.xmpdata}
+\Title{Your Document Title}
+\Author{Author Name}
+\Keywords{Keyword1\sep Keyword2}
+\Publisher{Publisher Name}
+\end{filecontents*}
+
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
@@ -22,6 +30,7 @@
 %             pdfkeywords={Leaf, Senescence, UV-B, Ambient temperature, Arabidopsis},
 %             pdfproducer={LaTeX with hyperref},
 %             pdfcreator={pdflatex}}
+
 
 % Change the page layout if you need to
 \geometry{left=1.25cm,right=1.25cm,top=1.25cm,bottom=1.25cm,columnsep=0.85cm,footskip=2\baselineskip}
