@@ -1,3 +1,4 @@
+% Supply PDF metadata.
 \begin{filecontents*}{\jobname.xmpdata}
     \Title{Tom Dobson Curriculum Vitae}
     \Author{T. M. Dobson}
@@ -7,41 +8,17 @@
 \end{filecontents*}
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
+
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
-%% AltaCV uses the fontawesome5 and packages.
-%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
-% Adding metadata:
-% \usepackage{datetime}
-% \usepackage{ifpdf}
-% \ifpdf
-% \pdfinfo{
-%    /Author (Tom Dobson)
-%    /Title (Tom Dobson Curriculum Vitae)
-%    /Keywords (Tom Dobson, Curriculum Vitae, CV, Resume, Data, Developer, Tableau, Alteryx, SQL, Python, Power BI)
-%    /CreationDate (D:\pdfdate)
-% }
-
-% \usepackage[colorlinks=true, allcolors=black]{hyperref}
-		    
-% \hypersetup{pdfauthor={Thomas Magnus Dobson},
-%             pdftitle={Investigating the Effects of Low-Dose UV-B and Ambient Temperature on Dark-Induced Leaf Senescence in Arabidopsis},
-%             pdfsubject={MSc (R) Thesis},
-%             pdfkeywords={Leaf, Senescence, UV-B, Ambient temperature, Arabidopsis},
-%             pdfproducer={LaTeX with hyperref},
-%             pdfcreator={pdflatex}}
-
-
-% Change the page layout if you need to
+% Set the page layout.
 \geometry{left=1.25cm,right=1.25cm,top=1.25cm,bottom=1.25cm,columnsep=0.85cm,footskip=2\baselineskip}
 
-% The paracol package lets you typeset columns of text in parallel
+% Use paracol package to typeset columns in parallel.
 \usepackage{paracol}
 
-% Change the font if you want to, depending on whether
-% you're using pdflatex or xelatex/lualatex
-% WHEN COMPILING WITH XELATEX PLEASE USE
-% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+% Set the font depending on whether you're using pdflatex or xelatex/lualatex.
+% When compiling with XeLaTeX use: xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex.
 \ifxetexorluatex
   % If using xelatex or lualatex:
   \setmainfont{Roboto Slab}
@@ -55,7 +32,7 @@
   \renewcommand{\familydefault}{\sfdefault}
 \fi
 
-% Change the colours if you want to
+% Set the colours.
 \definecolor{DimGray}{HTML}{696969}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
@@ -69,17 +46,16 @@
 \colorlet{emphasis}{Black}
 \colorlet{body}{Black}
 
-% Change some fonts, if necessary
+% Adjust the fonts.
 % \renewcommand{\namefont}{\Huge\bfseries}
 % \renewcommand{\personalinfofont}{\footnotesize\bfseries}
 % \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 % \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
+% Ajust the bullets used for itemize, rating markers used for \cvskill,
+% or the markers for the date/location for \cvevent.
 \renewcommand{\cvItemMarker}{{\small\textbullet}}
 \renewcommand{\cvRatingMarker}{\faCircle}
-% ...and the markers for the date/location for \customcvevent
 % \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
 \renewcommand{\cvLocationMarker}{\faMapMarker*}
 
@@ -95,15 +71,14 @@
 
 
 \makecvname
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+
+%% Reduce the size of fonts in itemize environments.
 \AtBeginEnvironment{itemize}{\small}
 
-%% Set the left/right column width ratio to 6:4.
+%% Set the left/right column width ratio (default 6:4).
 \columnratio{0.65}
 
-% Start a 2-column paracol. Both the left and right columns will automatically
-% break across pages if things get too long.
-
+% Start a 2-column paracol.
 \begin{paracol}{2}
 \cvsection{Experience}
 
@@ -178,8 +153,7 @@
 
 \end{itemize}
 
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
+%% Switch to the right column.
 \switchcolumn
 
 \cvsection{Contact}
