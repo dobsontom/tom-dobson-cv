@@ -1,13 +1,14 @@
 % Supply PDF metadata.
 \begin{filecontents*}{\jobname.xmpdata}
-    \Title{Tom Dobson Curriculum Vitae}
+    \Title{Tom M. Dobson Curriculum Vitae}
     \Author{T. M. Dobson}
     \Language{en-GB}
-    \Keywords{CV\sep Resume\sep Data\sep Developer\sep Consultant\sep Tableau\sep SQL\sep Alteryx\sep Python\sep Power BI}
+    \Keywords{Tom Dobson\sep Curriculum Vitae\sep CV\sep Resume\sep Data\sep Developer\sep Consultant\sep Analyst\sep Tableau\sep SQL\sep Alteryx\sep Python\sep Power BI}
     \Subject{Professional CV highlighting experience in data analytics and consulting.}
 \end{filecontents*}
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
+
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 
 % Set the page layout.
@@ -16,17 +17,16 @@
 % Use paracol package to typeset columns in parallel.
 \usepackage{paracol}
 
-% Set the font depending on whether you're using pdflatex or xelatex/lualatex.
-% When compiling with XeLaTeX use: xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex.
+% Set the font, taking into account the current compiler.
+% To compile with XeLaTeX please use: 
+% xerlatex -shell-escape -output-driver="xdvipdfmx -z 0" tom-dobson-cv.tex
 \ifxetexorluatex
-  % If using xelatex or lualatex:
-  \setmainfont{Roboto Slab}
-  \setsansfont{Lato}
+  % If using XeLaTeX or LuaLaTeX:
+  \setmainfont{Source Sans Pro}
+  \setsansfont{Source Sans Pro}
   \renewcommand{\familydefault}{\sfdefault}
 \else
-  % If using pdflatex:
-  % \usepackage[rm]{roboto}
-  % \usepackage[defaultsans]{lato}
+  % If using pdfLaTeX:
   \usepackage{sourcesanspro}
   \renewcommand{\familydefault}{\sfdefault}
 \fi
@@ -59,7 +59,7 @@
 \renewcommand{\cvLocationMarker}{\faMapMarker*}
 
 \begin{document}
-\name{Tom Dobson}
+\name{Tom M. Dobson}
 \personalinfo{%
   \email{dobs.tx@gmail.com}\par
   \linkedin{dobsontom}
@@ -67,7 +67,6 @@
   \github{dobsontom}
   \hfill\phone{+44 (0)7968 123456}
 }
-
 
 \makecvname
 
@@ -104,7 +103,7 @@
 
 \customcvevent{Insight Analyst}{Inmarsat}{Jan 2024 -- Present}{London}
 \begin{itemize}
-\item Designed and deployed a revenue protection system using SQL and Tableau to identify contracts that are approaching their end of commitment date, exposing \$3.7m in annualised revenue at risk in April 2024.
+\item Designed and deployed a revenue protection system using SQL and Tableau to identify contracts approaching their end of commitment date, exposing \$3.7m in annualised revenue at risk in April 2024.
 % \scriptsize
 % \begin{center}\textit{"I think this may be the best dashboard I have ever seen come from within our own ranks."}\\Chuck Mosely, Sales Director\end{center}
 % \normalsize
@@ -124,7 +123,7 @@
 \begin{itemize}
 \item Developed and productionised a solution in Oracle and Tableau to intelligently distribute warehouse tasks between employees based on resource availability and task complexity, resulting in significant time savings.
 \item Designed and implemented an automated system using SQL and Tableau to identify incorrectly declared cargo. Enabled recuperation of lost revenue via automated reporting of offending clients through BusinessObjects.
-\item Performed a full audit of an undocumented database to determine its capacity to answer various business questions, presenting findings to senior stakeholders.
+\item Performed a full audit of an undocumented database to determine its ability to answer various business questions, presenting findings to senior stakeholders.
 \item Scoped and re-engineered an Oracle database schema to prevent errors when calculating business-critical metrics (\textit{specifically?}), tested changes in parallel, and oversaw migration to the new design.
 \item Implemented a CO\textsubscript{2} monitoring pipeline to enable the calculation of customer emissions profiles ( ... ) .
 
