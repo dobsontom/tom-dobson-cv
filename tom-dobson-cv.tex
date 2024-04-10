@@ -17,7 +17,7 @@
 % Use paracol package to typeset columns in parallel.
 \usepackage{paracol}
 
-% Set the font, taking into account the current compiler.
+% Set the fonts, taking into account the current compiler.
 % To compile with XeLaTeX please use: 
 % xerlatex -shell-escape -output-driver="xdvipdfmx -z 0" tom-dobson-cv.tex
 \ifxetexorluatex
@@ -51,8 +51,8 @@
 % \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 % \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
-% Ajust the bullets used for itemize, rating markers used for \cvskill,
-% or the markers for the date/location for \cvevent.
+% Change the marks used for itemize bullets, \cvskill ratings, 
+% and \cvevent date and location.
 \renewcommand{\cvItemMarker}{{\small\textbullet}}
 \renewcommand{\cvRatingMarker}{\faCircle}
 % \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
@@ -60,7 +60,7 @@
 
 \begin{document}
 \name{Tom M. Dobson}
-\personalinfo{%
+\personalinfo{
   \email{dobs.tx@gmail.com}\par
   \linkedin{dobsontom}
   \hfill\location{London, UK}\par
@@ -70,13 +70,13 @@
 
 \makecvname
 
-%% Reduce the size of fonts in itemize environments.
+% Reduce the size of fonts in itemize environments.
 \AtBeginEnvironment{itemize}{\small}
 
-%% Set the left/right column width ratio (default 6:4).
+% Set the left:right column width ratio (default 6:4).
 \columnratio{0.65}
 
-% Start a 2-column paracol.
+% Start a two-column paracol.
 \begin{paracol}{2}
 \cvsection{Experience}
 
@@ -95,7 +95,7 @@
 \cvtag{Alteryx}
 \cvtag{Python}
 \cvtag{PowerBI}
-% \cvtag{Zapier}
+\cvtag{Zapier}
 
 \end{itemize}
 
@@ -140,8 +140,8 @@
 \customcvevent{Tableau \& Alteryx Consultant}{British Broadcasting Corporation (BBC)}{July 2022 -- Jan 2023}{London}
 \begin{itemize}
 \item Developed data pipelines in Alteryx to combine and standardise survey data from various sources.
-% \item Collaborated with internal and external stakeholders to construct a dashboard supporting a global understanding of brand perception. 
 \item Automated the delivery of daily reports on the best-performing news stories to senior stakeholders.
+% \item Collaborated with internal and external stakeholders to construct a dashboard supporting a global understanding of brand perception. 
 % \item Built a Tableau dashboard to highlight articles and themes with consistent and long-lasting traffic to guide content creation.
 
 \medskip
@@ -158,11 +158,11 @@
 \makecvinfo
 
 \cvsection{Education}
-\cvevent{MSc. (R) Biological Sciences}{University of Bristol}{Sep 2016 -- Aug 2021}{}
+\cvevent{MSc (R) Biological Sciences}{University of Bristol}{Sep 2016 -- Aug 2021}{}
 \small
-\faGraduationCap \;First Class Hons. (BSc.)
+\faGraduationCap \;First Class Hons. (BSc)
 \smallskip
-\\ \faTrophy \;Nominee · Best Postgraduate Thesis
+\\ \faTrophy \;Nominee · Best PhD / MSc Thesis
 \\\medskip
 \cvtag{Python}
 \cvtag{R}
@@ -214,6 +214,7 @@
 \cvtag{VS Code}
 
 \cvsection{Certifications}
+\smallskip
 \cvachievement{./icons/alteryx-logo.pdf}{Alteryx Designer Advanced Certified}{March 2024}{}
 \cvachievement{./icons/pbi-logo.pdf}{Power BI Data Analyst Associate}{October 2023}{}
 \cvachievement{./icons/tableau-logo.pdf}{Tableau Certified Data Analyst}{August 2023}{}
