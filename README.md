@@ -1,5 +1,5 @@
 # About This CV
-This CV is version-controlled, written in LaTeX, and based on the class [AltaCV](https://github.com/liantze/AltaCV) by LianTze Lim.
+This CV is version-controlled, written in LaTeX, and based on the [AltaCV](https://github.com/liantze/AltaCV) class by LianTze Lim.
 
 ## How to Read
 To read this CV, you can download the compiled PDF from the following [link](tom-dobson-cv.pdf).
