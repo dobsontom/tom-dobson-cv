@@ -13,7 +13,7 @@ Make sure you have the correct LaTeX distribution installed for your operating s
 ### Compilation
 1. Clone or [download](https://github.com/tomdobs/tom-dobson-cv/archive/refs/heads/main.zip) this GitHub repository.
 2. Use the terminal to navigate to the repository directory.
-3. Use the following command to compile with pdfLaTeX:
+3. Run the following command to compile with pdfLaTeX:
 
 ```bash
 pdflatex tom-dobson-cv.tex
