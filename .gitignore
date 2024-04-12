@@ -43,7 +43,7 @@
 *.xdy
 *.xml
 *.xmpi
-*.xmpidata
+*.xmpdata
 *blx.bib
 .bak 
 .mtc
