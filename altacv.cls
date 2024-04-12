@@ -346,8 +346,8 @@
 
 % v1.7: adds accsupp for the icon as well
 \newcommand{\cvachievement}[4]{%
-  \begin{tabularx}{\linewidth}{@{}p{1.8em} @{\hspace{0.7em}} >{\raggedright\arraybackslash}X@{}}
-  \multirow{2}{*}{\includegraphics[height=1.3\baselineskip]{#1}} & \small\textcolor{emphasis}{#2}\\
+  \begin{tabularx}{\linewidth}{@{}p{1.8em} @{\hspace{0.65em}} >{\raggedright\arraybackslash}X@{}}
+  \multirow{2}{*}{\includegraphics[height=1.35\baselineskip]{#1}} & \small\textcolor{emphasis}{#2}\\
   & \footnotesize#3
   \end{tabularx}%
   \smallskip
