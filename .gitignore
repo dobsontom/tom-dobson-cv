@@ -42,6 +42,8 @@
 *.vrb
 *.xdy
 *.xml
+*.xmpi
+*.xmpidata
 *blx.bib
 .bak 
 .mtc
