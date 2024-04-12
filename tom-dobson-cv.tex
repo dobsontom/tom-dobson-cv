@@ -17,6 +17,8 @@
 % Use paracol package to typeset columns in parallel.
 \usepackage{paracol}
 
+\usepackage{microtype}
+
 % Set the fonts, taking into account the current compiler.
 % To compile with XeLaTeX please use: 
 % xerlatex -shell-escape -output-driver="xdvipdfmx -z 0" tom-dobson-cv.tex
@@ -60,7 +62,7 @@
 %% Use BibLaTeX to handle citations and set .bib file.
 \usepackage[backend=biber,style=science,hyperref=true,abbreviate=true,date=year,sorting=none,autocite=footnote,autopunct=true]{biblatex}
 
-\addbibresource{./tom-dobson-cv.bib}
+\addbibresource{tom-dobson-cv.bib}
 
 \makeatletter
 \def\footnoterule{%
