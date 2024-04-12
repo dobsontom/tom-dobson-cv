@@ -32,7 +32,7 @@
 \fi
 
 % Set the colours.
-\definecolor{DimGray}{HTML}{696969}
+\definecolor{DimGrey}{HTML}{696969}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
 \definecolor{Black}{HTML}{000000}
@@ -51,12 +51,26 @@
 % \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 % \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
-% Change the marks used for itemize bullets, \cvskill ratings, 
-% and \cvevent date and location.
+% Change the marks used for itemize bullets, \cvskill ratings, and \cvevent date and location.
 \renewcommand{\cvItemMarker}{{\small\textbullet}}
 \renewcommand{\cvRatingMarker}{\faCircle}
 % \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
 \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+%% Use BibLaTeX to handle citations and set .bib file.
+\usepackage[backend=biber,style=science,hyperref=true,abbreviate=true,date=year,sorting=none,autocite=footnote,autopunct=true]{biblatex}
+
+\addbibresource{./tom-dobson-cv.bib}
+
+\makeatletter
+\def\footnoterule{%
+  \kern-3\p@
+  \hbox{%
+    \tikz \fill[color=LightGrey]
+        (0,0) rectangle (1in,.6pt);%
+  }%
+  \kern 2.6\p@\vskip2pt}
+\makeatother
 
 \begin{document}
 \name{Tom M. Dobson}
@@ -162,7 +176,7 @@
 \small
 \faGraduationCap \;First Class Hons. (BSc)
 \smallskip
-\\ \faTrophy \;Nominee · Best PhD / MSc Thesis
+\\ \faTrophy \;Nominee · Best PhD\hspace{0.5pt}/\hspace{0.5pt}MSc Thesis\phantom{.}\footfullcite{dobson2022}
 \\\medskip
 \cvtag{Python}
 \cvtag{R}
