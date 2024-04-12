@@ -17,8 +17,6 @@ Make sure you have the correct LaTeX distribution installed for your operating s
 
 ```bash
 pdflatex tom-dobson-cv.tex
-
 biber tom-dobson-cv
-
 pdflatex tom-dobson-cv.tex
 ```
