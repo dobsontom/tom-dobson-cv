@@ -1,10 +1,10 @@
 % Supply PDF metadata.
 \begin{filecontents*}{\jobname.xmpdata}
-    \Title{Tom M. Dobson Curriculum Vitae}
-    \Author{T. M. Dobson}
-    \Language{en-GB}
-    \Keywords{Tom Dobson\sep Curriculum Vitae\sep CV\sep Resume\sep Data\sep Developer\sep Consultant\sep Analyst\sep Tableau\sep SQL\sep Alteryx\sep Python\sep Power BI}
-    \Subject{Professional CV highlighting experience in data analytics and consulting.}
+  \Title{Tom M. Dobson Curriculum Vitae}
+  \Author{T. M. Dobson}
+  \Language{en-GB}
+  \Keywords{Tom Dobson\sep Curriculum Vitae\sep CV\sep Resume\sep Data\sep Developer\sep Consultant\sep Analyst\sep Tableau\sep SQL\sep Alteryx\sep Python\sep Power BI}
+  \Subject{Professional CV highlighting experience in data analytics and consulting.}
 \end{filecontents*}
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
@@ -23,14 +23,14 @@
 % To compile with XeLaTeX please use: 
 % xerlatex -shell-escape -output-driver="xdvipdfmx -z 0" tom-dobson-cv.tex
 \ifxetexorluatex
-  % If using XeLaTeX or LuaLaTeX:
-  \setmainfont{Source Sans Pro}
-  \setsansfont{Source Sans Pro}
-  \renewcommand{\familydefault}{\sfdefault}
+% If using XeLaTeX or LuaLaTeX:
+\setmainfont{Source Sans Pro}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
 \else
-  % If using pdfLaTeX:
-  \usepackage{sourcesanspro}
-  \renewcommand{\familydefault}{\sfdefault}
+% If using pdfLaTeX:
+\usepackage{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
 \fi
 
 % Set the colours.
@@ -66,22 +66,22 @@
 
 \makeatletter
 \def\footnoterule{%
-  \kern-3\p@
-  \hbox{%
-    \tikz \fill[color=LightGrey]
-        (0,0) rectangle (1in,.6pt);%
-  }%
-  \kern 2.6\p@\vskip2pt}
+\kern-3\p@
+\hbox{%
+  \tikz \fill[color=LightGrey]
+      (0,0) rectangle (1in,.6pt);%
+}%
+\kern 2.6\p@\vskip2pt}
 \makeatother
 
 \begin{document}
 \name{Tom M. Dobson}
 \personalinfo{
-  \email{dobs.tx@gmail.com}\par
-  \linkedin{dobsontom}
-  \hfill\location{London, UK}\par
-  \github{dobsontom}
-  \hfill\phone{+44 (0)7968 123456}
+\email{dobs.tx@gmail.com}\par
+\linkedin{dobsontom}
+\hfill\location{London, UK}\par
+\github{dobsontom}
+\hfill\phone{+44 (0)7968 123456}
 }
 
 \makecvname
@@ -99,9 +99,9 @@
 \customcvevent{Data Consultant}{The Information Lab}{Apr 2022 -- Present}{London}
 \begin{itemize}
 \item Completed an intensive, highly competitive, four-month training programme at a leading data analytics consultancy, specialising in Tableau, SQL, Alteryx, PowerBI, and Python.
-\item Automated an internal client management process, detecting new opportunities in Notion and generating supporting documentation, saving \textbf{0.25 FTE} and eliminating human error.
-\item Designed and implemented an automatic system to detect new Tableau User Group events online and post alerts and reminders to an internal Convo network using Python, GitHub Actions, Zapier, and Snowflake.
-\item Conducted two years of technical consulting at Inmarsat, IAG Cargo, and the BBC (detailed below).
+\item Automated an internal process to detect new client opportunities in Notion and generate supporting documentation, directly saving \textbf{0.25 FTE} and eliminating human error.
+\item Designed and implemented an automatic system to detect new Tableau User Group events online and post alerts to an internal network using Python, GitHub Actions, Zapier, and Snowflake.
+\item Conducted two years of technical consulting at Inmarsat, IAG Cargo, and the BBC as detailed below.
 % \item Delivered in-person and online training in Tableau and Alteryx across a number of clients and sectors, including the University of Hertfordshire.
 % Developed skills in stakeholder management, documentation authorship and maintenance, and version-control.
 
@@ -117,9 +117,13 @@
 
 \divider
 
+% \cvsection{Consulting}
+
 \customcvevent{Insight Analyst}{Inmarsat}{Jan 2024 -- Present}{London}
 \begin{itemize}
 \item Designed and deployed a revenue protection system using SQL and Tableau to identify contracts approaching their end of commitment date, exposing \textbf{£2.9m} in annualised revenue at risk in April 2024.
+\item Produced SQL queries to scaffold, unify, and standardise product performance data from over ten tables into a single source of truth. Designed an optimised Tableau front-end to alert the business of performance changes and issues in each source table, resulting in significant time savings.
+
 % \scriptsize
 % \begin{center}\textit{"I think this may be the best dashboard I have ever seen come from within our own ranks."}\\Chuck Mosely, Sales Director\end{center}
 % \normalsize
@@ -137,11 +141,11 @@
 
 \customcvevent{Advanced Analytics \& Reporting Analyst}{IAG Cargo}{Feb 2023 -- Aug 2023}{London}
 \begin{itemize}
-\item Developed and productionised a solution in Oracle and Tableau to intelligently distribute warehouse tasks between employees based on resource availability and task complexity, resulting in significant time savings.
+\item Developed and productionised SQL procedures and a Tableau front-end to intelligently distribute warehouse tasks between employees based on resource availability and task complexity, directly reducing headcount and saving \textbf{1 FTE}.
 \item Designed and deployed an automated system in Oracle to expose \textbf{£98k} in incorrectly declared cargo in 2023. Enabled recuperation of lost revenue via automated reporting of offending clients in BusinessObjects.
 \item Performed a full audit of an undocumented database to determine its ability to answer various business questions, presenting findings to senior stakeholders.
-\item Scoped and re-engineered an Oracle database schema to prevent errors when calculating business-critical metrics (\textit{specifically?}), tested changes in parallel, and oversaw migration to the new design.
-\item Implemented a CO\textsubscript{2} monitoring pipeline to enable the calculation of customer emissions profiles ( ... ) .
+\item Scoped and re-engineered an Oracle database schema to prevent errors when calculating business-critical flight performance metrics, tested changes in parallel, and oversaw migration to the new design.
+% \item Implemented a CO\textsubscript{2} monitoring pipeline to enable the calculation of customer emissions profiles ( ... ) .
 
 \medskip
 \cvtag{Tableau}
@@ -155,8 +159,8 @@
 
 \customcvevent{Tableau \& Alteryx Consultant}{British Broadcasting Corporation (BBC)}{Jul 2022 -- Jan 2023}{London}
 \begin{itemize}
-\item Developed data pipelines in Alteryx to combine and standardise survey data from various sources.
-\item Automated the delivery of daily reports on the best-performing news stories to senior stakeholders.
+\item Developed new data pipelines in Alteryx to combine and standardise survey data from various sources into a single source of truth. Delivered insights to stakeholders via a Tableau front-end.
+\item Automated the delivery of daily reports on high-performing news stories to senior stakeholders via Alteryx.
 % \item Collaborated with internal and external stakeholders to construct a dashboard supporting a global understanding of brand perception. 
 % \item Built a Tableau dashboard to highlight articles and themes with consistent and long-lasting traffic to guide content creation.
 
@@ -173,18 +177,6 @@
 \cvsection{Contact}
 \makecvinfo
 
-\cvsection{Education}
-\cvevent{MSc (R) Biological Sciences}{University of Bristol}{Sep 2016 -- Aug 2021}{}
-\small
-\faGraduationCap \;First Class Hons. (BSc)
-\smallskip
-\\ \faTrophy \;Nominee · Best PhD\hspace{0.5pt}/\hspace{0.5pt}MSc Thesis\phantom{.}\footfullcite{dobson2022}
-\\\medskip
-\cvtag{Python}
-\cvtag{R}
-\cvtag{SPSS}
-\cvtag{\LaTeX}
-
 \cvsection{Skills}
 \cvskill{Tableau}{5}
 \cvskill{Alteryx}{5}
@@ -199,6 +191,7 @@
 \medskip
 \cvtag{BigQuery}
 \cvtag{Snowflake}
+\cvtag{PostgreSQL}
 \\\smallskip
 \cvtag{Oracle 11\textit{g}}
 \cvtag{MS SQL Server}
@@ -234,6 +227,18 @@
 \cvachievement{./icons/alteryx-logo.pdf}{Alteryx Designer Advanced}{Mar 2024}{}
 \cvachievement{./icons/pbi-logo.pdf}{Power BI Data Analyst Associate}{Oct 2023}{}
 \cvachievement{./icons/tableau-logo.pdf}{Tableau Certified Data Analyst}{Aug 2023}{}
+
+\cvsection{Education}
+\cvevent{MSc (R) Biological Sciences}{University of Bristol}{Sep 2016 -- Aug 2021}{}
+\small
+\faGraduationCap \;First Class Hons. (BSc)
+\smallskip
+\\ \faTrophy \;Nominee · Best PhD\hspace{0.5pt}/\hspace{0.5pt}MSc Thesis\footfullcite{dobson2022}
+\\\medskip
+\cvtag{Python}
+\cvtag{R}
+\cvtag{SPSS}
+\cvtag{\LaTeX}
 
 \end{paracol}
 \end{document}
