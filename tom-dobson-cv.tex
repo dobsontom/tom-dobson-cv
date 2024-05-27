@@ -1,9 +1,9 @@
 % Supply PDF metadata.
 \begin{filecontents*}{\jobname.xmpdata}
-  \Title{Tom M. Dobson Curriculum Vitae}
+  \Title{Tom Dobson · Curriculum Vitae}
   \Author{T. M. Dobson}
   \Language{en-GB}
-  \Keywords{Tom Dobson\sep Curriculum Vitae\sep CV\sep Resume\sep Data\sep Developer\sep Consultant\sep Analyst\sep Tableau\sep SQL\sep Alteryx\sep Python\sep Power BI}
+  \Keywords{Tom M. Dobson\sep Tom Dobson\sep Curriculum Vitae\sep CV\sep Résumé\sep Resume\sep Resumé\sep Data\sep Consultant\sep Analytics Engineer\sep Analyst\sep Developer\sep Tableau\sep SQL\sep Alteryx\sep Python\sep Power BI\sep dbt}
   \Subject{Professional CV highlighting experience in data analytics and consulting.}
 \end{filecontents*}
 
@@ -24,13 +24,13 @@
 % xerlatex -shell-escape -output-driver="xdvipdfmx -z 0" tom-dobson-cv.tex
 \ifxetexorluatex
 % If using XeLaTeX or LuaLaTeX:
-\setmainfont{Source Sans Pro}
-\setsansfont{Source Sans Pro}
-\renewcommand{\familydefault}{\sfdefault}
+  \setmainfont{Source Sans Pro}
+  \setsansfont{Source Sans Pro}
+  \renewcommand{\familydefault}{\sfdefault}
 \else
 % If using pdfLaTeX:
-\usepackage{sourcesanspro}
-\renewcommand{\familydefault}{\sfdefault}
+  \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
 \fi
 
 % Set the colours.
@@ -56,12 +56,11 @@
 % Change the marks used for itemize bullets, \cvskill ratings, and \cvevent date and location.
 \renewcommand{\cvItemMarker}{{\small\textbullet}}
 \renewcommand{\cvRatingMarker}{\faCircle}
-% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
 \renewcommand{\cvLocationMarker}{\faMapMarker*}
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
 
 %% Use BibLaTeX to handle citations and set .bib file.
 \usepackage[backend=biber,style=science,hyperref=true,abbreviate=true,date=year,sorting=none,autocite=footnote,autopunct=true]{biblatex}
-
 \addbibresource{tom-dobson-cv.bib}
 
 \makeatletter
@@ -77,11 +76,11 @@
 \begin{document}
 \name{Tom M. Dobson}
 \personalinfo{
-\email{dobs.tx@gmail.com}\par
-\linkedin{dobsontom}
-\hfill\location{London, UK}\par
-\github{dobsontom}
-\hfill\phone{+44 (0)7968 123456}
+  \email{dobs.tx@gmail.com}\par
+  \linkedin{dobsontom}
+  \hfill\location{London, UK}\par
+  \github{dobsontom}
+  \hfill\phone{+44 (0)7968 673704}
 }
 
 \makecvname
@@ -96,7 +95,7 @@
 \begin{paracol}{2}
 \cvsection{Experience}
 
-\customcvevent{Data Consultant}{The Information Lab}{Apr 2022 -- Present}{London}
+\customcvevent{Analytics Consultant}{The Information Lab}{Apr 2022 -- Present}{London}
 \begin{itemize}
 \item Completed an intensive, highly competitive, four-month training programme at a leading data analytics consultancy, specialising in Tableau, SQL, Alteryx, PowerBI, and Python.
 \item Automated an internal process to detect new client opportunities in Notion and generate supporting documentation, directly saving \textbf{0.25 FTE} and eliminating human error.
@@ -122,7 +121,7 @@
 \customcvevent{Insight Analyst}{Inmarsat}{Jan 2024 -- Present}{London}
 \begin{itemize}
 \item Designed and deployed a revenue protection system using SQL and Tableau to identify contracts approaching their end of commitment date, exposing \textbf{£2.9m} in annualised revenue at risk in April 2024.
-\item Produced SQL queries to scaffold, unify, and standardise product performance data from over ten tables into a single source of truth. Designed an optimised Tableau front-end to alert the business of performance changes and issues in each source table, resulting in significant time savings.
+\item Created SQL queries to scaffold, unify, and standardise more than ten tables of product performance data into a single source of truth. Designed an optimised Tableau front-end to alert the business of performance changes and issues in source tables, resulting in significant time savings.
 
 % \scriptsize
 % \begin{center}\textit{"I think this may be the best dashboard I have ever seen come from within our own ranks."}\\Chuck Mosely, Sales Director\end{center}
@@ -141,10 +140,10 @@
 
 \customcvevent{Advanced Analytics \& Reporting Analyst}{IAG Cargo}{Feb 2023 -- Aug 2023}{London}
 \begin{itemize}
-\item Developed and productionised SQL procedures and a Tableau front-end to intelligently distribute warehouse tasks between employees based on resource availability and task complexity, directly reducing headcount and saving \textbf{1 FTE}.
-\item Designed and deployed an automated system in Oracle to expose \textbf{£98k} in incorrectly declared cargo in 2023. Enabled recuperation of lost revenue via automated reporting of offending clients in BusinessObjects.
-\item Performed a full audit of an undocumented database to determine its ability to answer various business questions, presenting findings to senior stakeholders.
-\item Scoped and re-engineered an Oracle database schema to prevent errors when calculating business-critical flight performance metrics, tested changes in parallel, and oversaw migration to the new design.
+\item Developed and productionised SQL procedures and a Tableau front-end to intelligently distribute warehouse tasks between employees based on resource availability and task complexity, directly enabling a reduction in headcount and saving \textbf{1 FTE}.
+\item Designed and deployed an automated system in Oracle to expose \textbf{£98k} in incorrectly declared cargo in 2023. Enabled recuperation of lost revenue via automated reporting of incidents through BusinessObjects.
+\item Performed a full audit of an undocumented database to determine its capacity to enhance performance monitoring for business operations, presenting findings to senior stakeholders.
+\item Scoped and re-engineered Oracle database schema to eliminate errors when calculating business-critical flight performance metrics, tested changes in parallel, and oversaw migration to the new design.
 % \item Implemented a CO\textsubscript{2} monitoring pipeline to enable the calculation of customer emissions profiles ( ... ) .
 
 \medskip
@@ -159,8 +158,8 @@
 
 \customcvevent{Tableau \& Alteryx Consultant}{British Broadcasting Corporation (BBC)}{Jul 2022 -- Jan 2023}{London}
 \begin{itemize}
-\item Developed new data pipelines in Alteryx to combine and standardise survey data from various sources into a single source of truth. Delivered insights to stakeholders via a Tableau front-end.
-\item Automated the delivery of daily reports on high-performing news stories to senior stakeholders via Alteryx.
+\item Designed and implemented data pipelines in Alteryx to clean and combine over six million rows of survey data. Produced an accompanying Tableau front-end to aggregate information into a single source of truth.
+\item Automated the creation and delivery of daily reports on high-performing news stories to senior stakeholders using Alteryx.
 % \item Collaborated with internal and external stakeholders to construct a dashboard supporting a global understanding of brand perception. 
 % \item Built a Tableau dashboard to highlight articles and themes with consistent and long-lasting traffic to guide content creation.
 
