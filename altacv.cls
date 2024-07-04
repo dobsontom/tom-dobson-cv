@@ -254,7 +254,7 @@
 }
 \let\photo\photoR
 
-\newcommand{\namefont}{\Huge\bfseries}
+\newcommand{\namefont}{\huge\bfseries}
 \newcommand{\taglinefont}{\large\bfseries}
 \newcommand{\personalinfofont}{\footnotesize\bfseries}
 \newcommand{\cvsectionfont}{\Large\bfseries}
