@@ -337,7 +337,7 @@
       ~#3}%
     }}%
   \ifstrequal{#4}{}{}{%
-    {\hfill\small\makebox[0.185\linewidth][l]%
+    {\hfill\small\makebox[0.18\linewidth][r]%
       {\BeginAccSupp{method=pdfstringdef,ActualText={\locationname:}}\cvLocationMarker\EndAccSupp{}%
         ~#4}%
     }}\par
