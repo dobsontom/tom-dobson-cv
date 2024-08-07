@@ -255,7 +255,7 @@
 \let\photo\photoR
 
 \newcommand{\namefont}{\huge\bfseries}
-\newcommand{\taglinefont}{\large\bfseries}
+\newcommand{\taglinefont}{\small}
 \newcommand{\personalinfofont}{\footnotesize\bfseries}
 \newcommand{\cvsectionfont}{\Large\bfseries}
 \newcommand{\cvsubsectionfont}{\large\bfseries}
@@ -266,9 +266,9 @@
     \begin{minipage}{\dimexpr\linewidth-\altacv@photos@width}%
     \raggedright%
     {\namefont\color{name}\MakeUppercase{\@name}\par}
-%    \medskip
-%    {\taglinefont\color{tagline}\@tagline\par}
-%    \medskip
+    % \medskip
+    % {\taglinefont\color{tagline}\@tagline\par}
+    % \medskip
 %    {\personalinfofont\@personalinfo\par}
     \end{minipage}\hfill%
 %    \altacv@right@photos\par%
