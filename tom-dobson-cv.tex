@@ -1,4 +1,4 @@
-% Supply PDF metadata.
+% Supply PDF metadata
 \begin{filecontents*}{\jobname.xmpdata}
   \Title{Tom Dobson · Curriculum Vitae}
   \Author{T. M. Dobson}
@@ -11,16 +11,16 @@
 
 \documentclass[10pt,a4paper,withhyper,ragged2e]{altacv}
 
-% Set the page layout.
+% Set the page layout
 \geometry{left=1.25cm,right=1.25cm,top=1cm,bottom=1cm,columnsep=1.2cm,footskip=2\baselineskip}
 
-% Use paracol package to typeset columns in parallel.
+% Use paracol package to typeset columns in parallel
 \usepackage{paracol}
 
-% % Use microtype package to improve typesetting.
+% % Use microtype package to improve typesetting
 % \usepackage{microtype}
 
-% Set the fonts, taking into account the current compiler.
+% Set the fonts, taking into account the current compiler
 % To compile with XeLaTeX please use: 
 % xelatex -shell-escape -output-driver="xdvipdfmx -z 0" tom-dobson-cv.tex
 \ifxetexorluatex
@@ -34,7 +34,7 @@
   \renewcommand{\familydefault}{\sfdefault}
 \fi
 
-% Set the colours.
+% Set the colours
 \definecolor{DimGrey}{HTML}{696969}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
@@ -48,19 +48,19 @@
 \colorlet{emphasis}{Black}
 \colorlet{body}{Black}
 
-% Adjust the fonts.
+% Adjust the fonts
 % \renewcommand{\namefont}{\Huge\bfseries}
 % \renewcommand{\personalinfofont}{\footnotesize\bfseries}
 % \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 % \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
-% Change the marks used for itemise bullets, \cvskill ratings, and \cvevent date and location.
+% Change the marks used for itemise bullets, \cvskill ratings, and \cvevent date and location
 \renewcommand{\cvItemMarker}{{\small\textbullet}}
 \renewcommand{\cvRatingMarker}{\faCircle}
 \renewcommand{\cvLocationMarker}{\faMapMarker*}
 % \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
 
-%% Use BibLaTeX to handle citations and set .bib file.
+%% Use BibLaTeX to handle citations and set .bib file
 \usepackage[backend=biber,style=science,hyperref=true,abbreviate=true,date=year,sorting=none,autocite=footnote,autopunct=true]{biblatex}
 \addbibresource{tom-dobson-cv.bib}
 
@@ -87,23 +87,23 @@
 
 \makecvname
 
-% Reduce the size of fonts in itemise environments.
+% Reduce the size of fonts in itemise environments
 \AtBeginEnvironment{itemize}{\small}
 
-% Set the left:right column width ratio (default 6:4).
+% Set the left:right column width ratio (default 6:4)
 \columnratio{0.6}
 
-% Start a two-column paracol.
+% Start a two-column paracol
 \begin{paracol}{2}
 \cvsection{Experience}
 
 \customcvevent{Analytics Consultant}{The Information Lab (TIL)}{Apr 2022 -- Present}{London}
 \begin{itemize}
-\item Leveraged expertise in SQL, Tableau, Python, Power BI, and Alteryx for major clients, achieving measurable impacts on operational costs and efficiency
+\item Leveraged expertise in SQL, Tableau, Python, Power BI, and Alteryx for major clients, measurably reducing operational costs and increasing efficiency
 \item Orchestrated the end-to-end delivery of data tools and infrastructure for Inmarsat, IAG Cargo, and the BBC, as detailed below
 \item Designed and implemented automations using Python, SQL, and GitHub Actions to detect and publicise new User Group events, increasing engagement by \textbf{80\%}
 \item Automated the detection of new client opportunities in Notion and generation of supporting documentation, directly saving \textbf{0.25 FTE} and eliminating human error
-% \item Delivered in-person and online training in Tableau and Alteryx across a number of clients and sectors, including the University of Hertfordshire.
+% \item Delivered in-person and online training in Tableau and Alteryx across a number of clients and sectors, including the University of Hertfordshire
 
 \medskip
 \cvtag{SQL}
@@ -121,8 +121,8 @@
 \customcvevent{Insight Analyst \hfill\small\textit{Consultant via TIL}}{Inmarsat}{Jan 2024 -- Present}{London}
 \begin{itemize}
 \item Developed a revenue protection system using SQL and Tableau, exposing over \textbf{£2.9m} in annualised revenue at risk
-\item Spearheaded migration of critical ETL pipelines from Alteryx to GCP, saving \textbf{£100k} in licence fees and enhancing data delivery reliability
-\item Modelled a data mart in GCP to consolidate performance data from 15 tables, creating a Tableau interface to alert on performance changes
+\item Spearheaded the migration of critical ETL pipelines from Alteryx to GCP, saving \textbf{£100k} in licence fees and enhancing data delivery reliability
+\item Modelled a data mart in GCP to consolidate performance data from 15 tables and created a Tableau interface to alert on performance changes
 \item Implemented Git for version control, ensuring robust change tracking and code management
 \item Authored comprehensive wikis and technical documentation, simplifying asset handover and future development
 
@@ -145,11 +145,11 @@
 
 \customcvevent{Advanced Analytics \& Reporting Analyst \hfill\small\textit{Consultant via TIL}}{IAG Cargo}{Feb 2023 -- Aug 2023}{London}
 \begin{itemize}
-\item Developed SQL procedures and Tableau interface for automatic, intelligent warehouse task distribution, saving \textbf{1 FTE} and enabling a headcount reduction
+\item Developed SQL procedures and Tableau interface for automatic, intelligent warehouse task distribution, saving \textbf{1 FTE} and enabling a reduction in headcount
 \item Designed an automated system using SQL to expose \textbf{£98k} in incorrectly declared cargo in 2023, enabling the recuperation of lost revenue via automated incident reporting
 \item Remodelled an Oracle database schema, reducing discrepancies in performance reporting from 15\% to \textbf{less than 1\%}
 \item Implemented a novel data mart using SQL, enabling the new product offering of CO\textsubscript{2} emissions tracking
-\item Performed a full audit of an undocumented real-time database for performance monitoring potential, presenting findings to senior stakeholders
+\item Performed a full audit of an undocumented real-time database for performance monitoring potential and presented findings to senior stakeholders
 
 \medskip
 \cvtag{SQL}
@@ -163,10 +163,10 @@
 
 \customcvevent{Tableau \& Alteryx Consultant \hfill\small\textit{Consultant via TIL}}{The BBC}{Jul 2022 -- Jan 2023}{London}
 \begin{itemize}
-\item Designed data pipelines to consolidate over \textbf{6 million} rows of survey data, creating a Tableau front end to enable self-service insight discovery
+\item Designed data pipelines to consolidate over \textbf{6m} rows of survey data and created a Tableau front end to enable self-service insight discovery
 \item Automated daily reporting of high-performing articles for senior stakeholders using Alteryx
-% \item Collaborated with internal and external stakeholders to construct a dashboard supporting a global understanding of brand perception. 
-% \item Built a Tableau dashboard to highlight articles and themes with consistent and long-lasting traffic to guide content creation.
+% \item Collaborated with internal and external stakeholders to construct a dashboard supporting a global understanding of brand perception
+% \item Built a Tableau dashboard to highlight articles and themes with consistent and long-lasting traffic to guide content creation
 
 \medskip
 \cvtag{SQL}
@@ -176,7 +176,7 @@
 
 \end{itemize}
 
-%% Switch to the right column.
+%% Switch to the right column
 \switchcolumn
 
 \cvsection{Contact}
