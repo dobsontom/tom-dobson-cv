@@ -9,10 +9,10 @@
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
-\documentclass[10pt,a4paper,withhyper,ragged2e]{altacv}
+\documentclass[10pt, a4paper, withhyper, ragged2e]{altacv}
 
 % Set the page layout
-\geometry{left=1.25cm,right=1.25cm,top=1cm,bottom=1cm,columnsep=1.2cm,footskip=2\baselineskip}
+\geometry{left=1.25cm, right=1.25cm, top=1cm, bottom=1cm, columnsep=1.2cm, footskip=2\baselineskip}
 
 % Use paracol package to typeset columns in parallel
 \usepackage{paracol}
@@ -21,7 +21,7 @@
 % \usepackage{microtype}
 
 % Set the fonts, taking into account the current compiler
-% To compile with XeLaTeX please use: 
+% To compile with XeLaTeX please use:
 % xelatex -shell-escape -output-driver="xdvipdfmx -z 0" tom-dobson-cv.tex
 \ifxetexorluatex
 % If using XeLaTeX or LuaLaTeX:
@@ -61,197 +61,214 @@
 % \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
 
 % Use BibLaTeX to handle citations and set .bib file
-\usepackage[backend=biber,style=science,hyperref=true,abbreviate=true,date=year,sorting=none,autocite=footnote,autopunct=true]{biblatex}
+\usepackage[
+	backend=biber,
+	style=science,
+	hyperref=true,
+	abbreviate=true,
+	date=year,
+	sorting=none,
+	autocite=footnote,
+	autopunct=true
+]{biblatex}
 \addbibresource{tom-dobson-cv.bib}
 
 % Adjust footnote rule formatting
 \makeatletter
 \def\footnoterule{%
-\kern-3\p@
-\hbox{%
-  \tikz \fill[color=LightGrey]
-      (0,0) rectangle (1in,.6pt);%
+\kern-3\p@ \hbox{%
+\tikz{\fill[color=LightGrey] (0,0) rectangle (1in,.6pt);}%
 }%
 \kern 2.6\p@\vskip2pt}
 \makeatother
 
 \begin{document}
-\name{Tom Dobson}
-% \tagline{Experienced Analytics Consultant with a Master's in Biological Sciences. Loves solving data problems with SQL, Python, Tableau, dbt, Alteryx, and Power BI.}
-\personalinfo{
-  \email{dobs.tx@gmail.com}\par
-  \linkedin{dobsontom}
-  \hfill\location{London, UK}\par
-  \github{dobsontom}
-  \hfill\phone{+44 (0)7968 673704}
-}
+	\name{Tom Dobson}
+	% \tagline{Experienced Analytics Consultant with a Master's in Biological Sciences. Loves solving data problems with SQL, Python, Tableau, dbt, Alteryx, and Power BI.}
+	\personalinfo{
+    \email{dobs.tx@gmail.com}\par
+    \linkedin{dobsontom}
+    \hfill\location{London, UK}\par
+    \github{dobsontom}
+    \hfill\phone{+44 (0)7968 673704} 
+  }
 
-\makecvname
+	\makecvname
 
-% Reduce the size of fonts in itemise environments
-\AtBeginEnvironment{itemize}{\small}
+	% Reduce the size of fonts in itemise environments
+	\AtBeginEnvironment{itemize}{\small}
 
-% Set the left:right column width ratio (default 6:4)
-\columnratio{0.6}
+	% Set the left:right column width ratio (default 6:4)
+	\columnratio{0.6}
 
-% Start a two-column paracol
-\begin{paracol}{2}
-\cvsection{Experience}
+	% Start a two-column paracol
+	\begin{paracol}{2}
+    \cvsection{Experience}
+		\customcvevent{Analytics Consultant}{The Information Lab (TIL)}{Apr 2022 -- Present}{London}
+		\begin{itemize}
+			\item Leveraged expertise in SQL, Tableau, Python, Power BI, and Alteryx for major clients,
+				measurably reducing operational costs and increasing efficiency
 
-\customcvevent{Analytics Consultant}{The Information Lab (TIL)}{Apr 2022 -- Present}{London}
-\begin{itemize}
-\item Leveraged expertise in SQL, Tableau, Python, Power BI, and Alteryx for major clients, measurably reducing operational costs and increasing efficiency
-\item Orchestrated the end-to-end delivery of data tools and infrastructure for Inmarsat, IAG Cargo, and the BBC, as detailed below
-\item Designed and implemented automations using Python, SQL, and GitHub Actions to detect and publicise new User Group events, increasing engagement by \textbf{80\%}
-\item Automated the detection of new client opportunities in Notion and generation of supporting documentation, directly saving \textbf{0.25 FTE} and eliminating human error
-% \item Delivered in-person and online training in Tableau and Alteryx across a number of clients and sectors, including the University of Hertfordshire
+			\item Orchestrated the end-to-end delivery of data tools and infrastructure for Inmarsat, IAG
+				Cargo, and the BBC, as detailed below
 
-\medskip
-\cvtag{SQL}
-\cvtag{Snowflake}
-\cvtag{Tableau}
-\cvtag{Python}
-\cvtag{Git}
-\cvtag{Alteryx}
-\cvtag{Power BI}
+			\item Designed and implemented automations using Python, SQL, and GitHub Actions to detect and
+				publicise new User Group events, increasing engagement by \textbf{80\%}
 
-\end{itemize}
+			\item Automated the detection of new client opportunities in Notion and generation of supporting
+				documentation, directly saving \textbf{0.25 FTE} and eliminating human error
+			% \item Delivered in-person and online training in Tableau and Alteryx across a number of clients and sectors, including the University of Hertfordshire
+				
+      \medskip
 
-\divider
+			\cvtag{SQL} \cvtag{Snowflake} \cvtag{Tableau} \cvtag{Python} \cvtag{Git} \cvtag{Alteryx} \cvtag{Power BI}
+		\end{itemize}
 
-\customcvevent{Insight Analyst \hfill\small\textit{Consultant via TIL}}{Inmarsat}{Jan 2024 -- Present}{London}
-\begin{itemize}
-\item Developed a revenue protection system using SQL and Tableau, exposing over \textbf{£2.9m} in annualised revenue at risk
-\item Spearheaded the migration of critical ETL pipelines from Alteryx to GCP, saving \textbf{£100k} in licence fees and enhancing data delivery reliability
-\item Modelled a data mart in GCP to consolidate performance data from 15 tables and created a Tableau interface to alert on performance changes
-\item Implemented Git for version control, ensuring robust change tracking and code management
-\item Authored comprehensive wikis and technical documentation, simplifying asset handover and future development
+		\divider
 
-% \scriptsize
-% \begin{center}\textit{"I think this may be the best dashboard I have ever seen come from within our own ranks."}\\Chuck Mosely, Sales Director\end{center}
-% \normalsize
+		\customcvevent{Insight Analyst \hfill\small\textit{Consultant via TIL}}{Inmarsat}{Jan 2024 -- Present}{London}
+		\begin{itemize}
+			\item Developed a revenue protection system using SQL and Tableau, exposing over \textbf{£2.9m}
+				in annualised revenue at risk
 
-\medskip
-\cvtag{SQL}
-\cvtag{GCP}
-\cvtag{Tableau}
-\cvtag{dbt}
-\cvtag{Git}
-\cvtag{Alteryx}
-\cvtag{ADF}
+			\item Spearheaded the migration of critical ETL pipelines from Alteryx to GCP, saving \textbf{£100k}
+				in licence fees and enhancing data delivery reliability
 
-\end{itemize}
+			\item Modelled a data mart in GCP to consolidate performance data from 15 tables and created a
+				Tableau interface to alert on performance changes
 
-\divider
+			\item Implemented Git for version control, ensuring robust change tracking and code management
 
-\customcvevent{Advanced Analytics \& Reporting Analyst \hfill\small\textit{Consultant via TIL}}{IAG Cargo}{Feb 2023 -- Aug 2023}{London}
-\begin{itemize}
-\item Developed SQL procedures and Tableau interface for automatic, intelligent warehouse task distribution, saving \textbf{1 FTE} and enabling a reduction in headcount
-\item Designed an automated system using SQL to expose \textbf{£98k} in incorrectly declared cargo in 2023, enabling the recuperation of lost revenue via automated incident reporting
-\item Remodelled an Oracle database schema, reducing discrepancies in performance reporting from 15\% to \textbf{less than 1\%}
-\item Implemented a novel data mart using SQL, enabling the new product offering of CO\textsubscript{2} emissions tracking
-\item Performed a full audit of an undocumented real-time database for performance monitoring potential and presented findings to senior stakeholders
+			\item Authored comprehensive wikis and technical documentation, simplifying asset handover and
+				future development
+			% \scriptsize
+			% \begin{center}\textit{"I think this may be the best dashboard I have ever seen come from within our own ranks."}\\Chuck Mosely, Sales Director\end{center}
+			% \normalsize
 
-\medskip
-\cvtag{SQL}
-\cvtag{Oracle 11\textit{g}}
-\cvtag{Tableau}
-\cvtag{BusinessObjects}
+			\medskip
+        
+			\cvtag{SQL} \cvtag{GCP} \cvtag{Tableau} \cvtag{dbt} \cvtag{Git} \cvtag{Alteryx} \cvtag{ADF}
+		\end{itemize}
 
-\end{itemize}
+		\divider
 
-\divider
+		\customcvevent{Advanced Analytics \& Reporting Analyst \hfill\small\textit{Consultant via TIL}}{IAG Cargo}{Feb 2023 -- Aug 2023}{London}
+		\begin{itemize}
+			\item Developed SQL procedures and Tableau interface for automatic, intelligent warehouse task
+				distribution, saving \textbf{1 FTE} and enabling a reduction in headcount
 
-\customcvevent{Tableau \& Alteryx Consultant \hfill\small\textit{Consultant via TIL}}{The BBC}{Jul 2022 -- Jan 2023}{London}
-\begin{itemize}
-\item Designed data pipelines to consolidate over \textbf{6m} rows of survey data and created a Tableau front end to enable self-service insight discovery
-\item Automated daily reporting of high-performing articles for senior stakeholders using Alteryx
-% \item Collaborated with internal and external stakeholders to construct a dashboard supporting a global understanding of brand perception
-% \item Built a Tableau dashboard to highlight articles and themes with consistent and long-lasting traffic to guide content creation
+			\item Designed an automated system using SQL to expose \textbf{£98k} in incorrectly declared
+				cargo in 2023, enabling the recuperation of lost revenue via automated incident reporting
 
-\medskip
-\cvtag{SQL}
-\cvtag{Redshift}
-\cvtag{Tableau}
-\cvtag{Alteryx}
+			\item Remodelled an Oracle database schema, reducing discrepancies in performance reporting
+				from 15\% to \textbf{less than 1\%}
 
-\end{itemize}
+			\item Implemented a novel data mart using SQL, enabling the new product offering of CO\textsubscript{2}
+				emissions tracking
 
-% Switch to the right column
-\switchcolumn
+			\item Performed a full audit of an undocumented real-time database for performance monitoring potential
+				and presented findings to senior stakeholders
 
-\cvsection{Contact}
-\makecvinfo
+			\medskip
 
-\cvsection{Skills}
-\cvskill{Tableau}{5}
-\cvskill{SQL}{5}
-\cvskill{Alteryx}{4}
-\cvskill{Python}{3}
-\cvskill{dbt}{3}
-\cvskill{Power BI}{3}
+			\cvtag{SQL} \cvtag{Oracle 11\textit{g}} \cvtag{Tableau} \cvtag{BusinessObjects}
+		\end{itemize}
 
-% \small{$\bullet$  = Proficient\hfill 
-% $\bullet$$\bullet$$\bullet$$\bullet$$\bullet$ = Expert}\\
+		\divider
 
-\divider
-\\\textbf{\faDatabase \:Databases}\\
-\medskip
-\cvtag{BigQuery}
-\cvtag{Snowflake}
-\cvtag{PostgreSQL}
-\\\smallskip
-\cvtag{Oracle 11\textit{g}}
-\cvtag{MS SQL Server}
+		\customcvevent{Tableau \& Alteryx Consultant \hfill\small\textit{Consultant via TIL}}{The BBC}{Jul 2022 -- Jan 2023}{London}
+		\begin{itemize}
+			\item Designed data pipelines to consolidate over \textbf{6m} rows of survey data and created
+				a Tableau front end to enable self-service insight discovery
 
-\divider
+			\item Automated daily reporting of high-performing articles for senior stakeholders using Alteryx
+			% \item Collaborated with internal and external stakeholders to construct a dashboard supporting a global understanding of brand perception
+			% \item Built a Tableau dashboard to highlight articles and themes with consistent and long-lasting traffic to guide content creation
 
-\textbf{\faGithub \:Management}\\
-\medskip
-\cvtag{GitHub}
-\cvtag{Jira}
-\cvtag{Notion}
-\\\smallskip
-\cvtag{Confluence}
+			\medskip
 
-\divider
+			\cvtag{SQL} \cvtag{Redshift} \cvtag{Tableau} \cvtag{Alteryx}
+		\end{itemize}
 
-\textbf{\faCogs \:Data Engineering}\\
-\medskip
-\cvtag{SQL}
-\cvtag{Python}
-\cvtag{dbt}
-\cvtag{Git}
-\\\smallskip
-\cvtag{PowerShell}
-\cvtag{YAML}
+		% Switch to the right column
+		\switchcolumn
 
-\divider
+		\cvsection{Contact}
 
-\textbf{\faFlask \:Data Science}\\
-\medskip
-\cvtag{Jupyter}
-\cvtag{NumPy}
-\cvtag{pandas}
+    \makecvinfo
 
-\cvsection{Certifications}
-\smallskip
-\cvachievement{./icons/dbt-logo.pdf}{dbt Fundamentals}{Jun 2024}{}
-\cvachievement{./icons/alteryx-logo.pdf}{Alteryx Designer Advanced}{Mar 2024}{}
-\cvachievement{./icons/pbi-logo.pdf}{Power BI Data Analyst Associate}{Oct 2023}{}
-\cvachievement{./icons/tableau-logo.pdf}{Tableau Certified Data Analyst}{Aug 2023}{}
+		\cvsection{Skills}
+    \cvskill{Tableau}{5}
+    \cvskill{SQL}{5}
+    \cvskill{Alteryx}{4}
+    \cvskill{Python}{3}
+		\cvskill{dbt}{3}
+    \cvskill{Power BI}{3}
 
-\cvsection{Education}
-\cvevent{MSc (R) Biological Sciences}{University of Bristol}{Sep 2016 -- Aug 2021}{}
-\small
-\faGraduationCap \;First Class · BSc
-\smallskip
-\\ \faTrophy \;Nominee · Best PhD\hspace{0.5pt}/\hspace{0.5pt}MSc Thesis\footfullcite{dobson2022}
-\\\medskip
-\cvtag{Python}
-\cvtag{R}
-\cvtag{SPSS}
-\cvtag{\LaTeX}
+		% \small{$\bullet$  = Proficient\hfill
+		% $\bullet$$\bullet$$\bullet$$\bullet$$\bullet$ = Expert}
 
-\end{paracol}
+		\divider
+
+		\textbf{\faDatabase \:Databases}
+
+		\medskip
+
+		\cvtag{BigQuery} \cvtag{Snowflake} \cvtag{PostgreSQL}
+
+		\smallskip
+
+		\cvtag{Oracle 11\textit{g}} \cvtag{MS SQL Server}
+
+		\divider
+
+		\textbf{\faGithub \:Management}
+
+		\medskip
+
+		\cvtag{GitHub} \cvtag{Jira} \cvtag{Notion}
+
+		\smallskip
+
+		\cvtag{Confluence}
+
+		\divider
+
+		\textbf{\faCogs \:Data Engineering}
+
+		\medskip
+
+		\cvtag{SQL} \cvtag{Python} \cvtag{dbt} \cvtag{Git}
+
+		\smallskip
+
+		\cvtag{PowerShell} \cvtag{YAML}
+
+		\divider
+
+		\textbf{\faFlask \:Data Science}
+
+		\medskip
+
+		\cvtag{Jupyter} \cvtag{NumPy} \cvtag{pandas}
+
+		\cvsection{Certifications}
+
+		\cvachievement{./icons/dbt-logo.pdf}{dbt Fundamentals}{Jun 2024}{}
+    \cvachievement{./icons/alteryx-logo.pdf}{Alteryx Designer Advanced}{Mar 2024}{}
+		\cvachievement{./icons/pbi-logo.pdf}{Power BI Data Analyst Associate}{Oct 2023}{}
+    \cvachievement{./icons/tableau-logo.pdf}{Tableau Certified Data Analyst}{Aug 2023}{}
+
+		\cvsection{Education} \cvevent{MSc (R) Biological Sciences}{University of Bristol}{Sep 2016 -- Aug 2021}{}
+
+		\small{\faGraduationCap \;First Class · BSc}
+
+		\smallskip
+
+		\small{\faTrophy \;Nominee · Best PhD\hspace{0.5pt}/\hspace{0.5pt}MSc Thesis\footfullcite{dobson2022}}
+
+		\medskip
+
+		\cvtag{Python} \cvtag{R} \cvtag{SPSS} \cvtag{\LaTeX}
+	\end{paracol}
 \end{document}
