@@ -17,7 +17,7 @@
 % Use paracol package to typeset columns in parallel
 \usepackage{paracol}
 
-% % Use microtype package to improve typesetting
+% Use microtype package to improve typesetting
 % \usepackage{microtype}
 
 % Set the fonts, taking into account the current compiler
@@ -60,10 +60,11 @@
 \renewcommand{\cvLocationMarker}{\faMapMarker*}
 % \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
 
-%% Use BibLaTeX to handle citations and set .bib file
+% Use BibLaTeX to handle citations and set .bib file
 \usepackage[backend=biber,style=science,hyperref=true,abbreviate=true,date=year,sorting=none,autocite=footnote,autopunct=true]{biblatex}
 \addbibresource{tom-dobson-cv.bib}
 
+% Adjust footnote rule formatting
 \makeatletter
 \def\footnoterule{%
 \kern-3\p@
@@ -176,7 +177,7 @@
 
 \end{itemize}
 
-%% Switch to the right column
+% Switch to the right column
 \switchcolumn
 
 \cvsection{Contact}
