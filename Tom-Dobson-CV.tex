@@ -36,8 +36,8 @@ data engineering role where the infrastructure is part of the job.
   \item Migrated ingestion from Fivetran, Stitch, and Meltano to self-hosted Airbyte on EKS,
         cutting ETL licence spend \cvmetric{94\%}, around \$64k a year
   \item Cut the production MySQL database's query rate \cvmetric{40\%} and CPU 28\% by profiling
-        its workload and fixing the worst offenders, each measured at deployment: missing indexes,
-        N+1 lookups refetching a whole table 104~times a second, and dead scheduled jobs
+        its workload and fixing the worst offenders, including missing indexes, dead scheduled
+        jobs, and N+1 lookups that refetched whole tables over 100~times a second
   \item Mapped the whole data platform's architecture as code and keep it current, around
         \cvmetric{90}~components from source to destination, which the Technology Director called
         the standard every team should follow
