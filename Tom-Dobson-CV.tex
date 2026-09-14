@@ -23,8 +23,8 @@ Data engineer owning Tails.com's data platform end to end, from the MySQL and Po
 behind the application, through the Snowflake, dbt, and Airflow estate, to the Terraform and
 Kubernetes underneath. Cut Snowflake spend 46\% and ETL licence spend 94\%, together over \$160k a
 year, whilst the estate grew to around 290~billion rows. Inside the application, profiled the
-production database and cut its query load and CPU by around a third across 2026. Looking for a
-senior data engineering role where the infrastructure is part of the job.
+production database and cut its query rate 40\% and its CPU 28\% across 2026. Looking for a senior
+data engineering role where the infrastructure is part of the job.
 
 \cvsection{Experience}
 
@@ -35,9 +35,9 @@ senior data engineering role where the infrastructure is part of the job.
         workload
   \item Migrated ingestion from Fivetran, Stitch, and Meltano to self-hosted Airbyte on EKS,
         cutting ETL licence spend \cvmetric{94\%}, around \$64k a year
-  \item Profiled the production MySQL workload and removed \cvmetric{18\%} of its query volume
-        across a series of optimisations, including eliminating N+1 lookups via caching and
-        indexing a join that scanned around 40,000~rows a second to return 1,500
+  \item Cut the production MySQL database's query rate \cvmetric{40\%} and CPU 28\% by profiling
+        its workload and fixing the worst offenders, each measured at deployment: missing indexes,
+        N+1 lookups refetching a whole table 104~times a second, and dead scheduled jobs
   \item Mapped the whole data platform's architecture as code and keep it current, around
         \cvmetric{90}~components from source to destination, which the Technology Director called
         the standard every team should follow
@@ -49,7 +49,7 @@ senior data engineering role where the infrastructure is part of the job.
         passwords to key-pair authentication
   \item Audited every event path from the core application into Snowflake ahead of a platform
         migration, found the one dependency with no replacement, and wrote the reference backend
-        engineers used to design the Kafka topic that replaced it
+        engineers used to design the Kafka topic replacing it
   \item Secured AI-agent access to dbt and Snowflake through an MCP server on a dedicated identity
         that can build in each developer's own database but never read unmasked PII, write to
         production, or escalate its own privileges
